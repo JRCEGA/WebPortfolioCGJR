@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #e8e8e8;
   --foreground: #171717;
 }
 
@@ -39,4 +39,39 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+header {
+  position: sticky;
+  top: 0; /* Sticks the header at the top of the viewport */
+  z-index: 1000; /* Ensures the header stays on top of other content */
+  color: #000000; /* Text color */
+  padding: 10px 20px; /* Adds some padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  border-bottom: 0.5px solid black;
+  border-radius: 2.5px;
+}
+
+footer {
+  border-top: 0.5px solid black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.SelfPortrait {
+  width: 150px; /* Define the width of the circular crop */
+  height: 150px; /* Define the height of the circular crop */
+  border-radius: 50%; /* Makes the element circular */
+  overflow: hidden; /* Ensures the content is clipped to the circle */
+  display: flex; /* Optional: centers content inside */
+  align-items: center; /* Optional: vertically centers content */
+  justify-content: center; /* Optional: horizontally centers content */
+}
+
+.SelfPortrait img {
+  object-fit: cover; /* Ensures the image covers the circular area */
+  width: 100%; /* Fills the entire container */
+  height: 100%; /* Fills the entire container */
 }
