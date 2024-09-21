@@ -1,11 +1,11 @@
 :root {
-  --background: #e8e8e8;
+  --background: #F3F6FF;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #323444;
     --foreground: #ededed;
   }
 }
@@ -54,15 +54,15 @@ header {
 
 footer {
   border-top: 0.5px solid black;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   color: #000000;
   padding: 10px 20px;
   text-align: center;
 }
 
 .SelfPortrait {
-  width: 150px; /* Define the width of the circular crop */
-  height: 150px; /* Define the height of the circular crop */
+  width: 250px; /* Define the width of the circular crop */
+  height: 250px; /* Define the height of the circular crop */
   border-radius: 50%; /* Makes the element circular */
   overflow: hidden; /* Ensures the content is clipped to the circle */
   display: flex; /* Optional: centers content inside */
@@ -75,3 +75,59 @@ footer {
   width: 100%; /* Fills the entire container */
   height: 100%; /* Fills the entire container */
 }
+
+.IntroText {
+  padding: 0 20vw;
+}
+
+.WorkExperience {
+  padding: 0 20vw;
+  margin-top: 1vw;
+}
+
+.WorkExperienceContainer {
+  padding: 0.5vw 0;
+}
+
+.Work1 {
+  padding: 1vw 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 1vw;
+}
+
+.Work1 ul {
+  padding-left: 1vw;
+  list-style-position: inside;
+}
+
+.Work2 {
+  padding: 1vw 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 1vw;
+}
+
+.Work2 ul {
+  padding-left: 1vw;
+  list-style-position: inside;
+}
+
+.Work3 {
+  padding: 1vw 0;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.Education {
+  padding: 0 20vw;
+  margin-top: 2.5vw;
+}
+
+.EducationContainer{
+  padding-top: 1vw;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-bottom: 1vw;
+}
+

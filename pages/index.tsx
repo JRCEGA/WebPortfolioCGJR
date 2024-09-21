@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import SocialMedia from "./SocialMedia";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1>Jose Roberto Cebreros</h1>
+        <h1>Jose</h1>
       </header>
       <main>
         <div className="SelfPortrait">
@@ -34,13 +36,49 @@ export default function Home() {
             height={300}
           />
         </div>
-        <p>Hello, Welcome!</p>
-        <p>My name is Jose Roberto Cebreros, im 21 years old, im currently in my senior year at University pursuing a Bachelor's in Computer Science at CETYS Universidad in Tijuana, Mexico</p>
-        <p>At this time, im having an Internship experience as a Software QA Engineer at Dexcom, Inc. a company that develops, manufactures, produces, and distributes continuous glucose monitoring systems for diabetes management.</p>
-        <p>I encourage you to follow me on my social, and learn more About me:</p>
+        <div className="IntroText">
+          <h1>Hello, Welcome!</h1>
+          <p>My name is <b>Jose Roberto Cebreros</b>, im 21 years old, im currently in my senior year at University pursuing a Bachelor's in Computer Science at CETYS Universidad in Tijuana, Mexico</p>
+          <p>I encourage you to follow me on my social, and learn more About me:</p>
+        </div>
+        <div className="WorkExperience">
+          <h1>Work Experience</h1>
+          <div className="WorkExperienceContainer">
+            <div className="Work1">
+              <h3>Dexcom/iTJ</h3>
+              <h5>Software QA Engineer Trainee</h5>
+              <ul>
+                <li>Trainee working on a nearshoring company called ITJ for Dexcom, a company that manufactures Glucose monitoring
+                devices</li>
+                <li>Part of the Quality Assurance team that made sure all products comply with multiple regulations including FDA, using
+                both Scrum and Waterfall methodologies.</li>
+              </ul>
+            </div>
+            <div className="Work2">
+              <h3>E-Commerce administrator & Shopify Web Developer</h3>
+              <h5>Local Business shop (MG Joyeria)</h5>
+              <ul>
+                <li>Creator and Current administrator of a Shopify website for a small local business, In charge of updating the website with new merchandise as soon as they arrive at the warehouse.</li>
+                <li>Developed the website on Shopify editing part of the liquid code, and custom CSS.</li>
+              </ul>
+            </div>
+            <div className="Work3">
+              <h3>Sales Associate</h3>
+              <h5>Multiple Retail Stores (American Eagle, Vans, Lacoste)</h5>
+            </div>
+          </div>
+        </div>
+        <div className="Education">
+          <h1>Education</h1>
+          <div className="EducationContainer">
+            <h3>CETYS Universidad</h3>
+            <h5>B.S in Computer Science</h5>
+          </div>
+        </div>
       </main>
       <footer>
         <p>Latest Rev. September 2024</p>
+        <SocialMedia />
       </footer>
        
     </>
