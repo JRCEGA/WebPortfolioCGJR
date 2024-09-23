@@ -21,7 +21,7 @@ const SocialMedia: React.FC = () => {
         <FaGithub size={24} />
       </a>
       <a
-        href="https://twitter.com/yourprofile"
+        href="https://www.instagram.com/robertocebrerosg/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter"
