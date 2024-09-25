@@ -3,6 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import { PiBracketsAngle } from "react-icons/pi";
+import { MdPermContactCalendar } from "react-icons/md";
+import { IoSchoolSharp } from "react-icons/io5";
 import SocialMedia from "./SocialMedia";
 import DarkModeToggle from "./DarkModeToggle";
 import { useEffect, useState } from 'react';
@@ -36,13 +40,7 @@ const Home = () => {
               <img
                 src="/me.png"
                 alt="Portrait of myself."
-                style={{
-                  width: '25vw',
-                  height: '25vw',
-                  boxShadow: 'rgba(100, 100, 111, 0.8) 0px 7px 29px 0px',
-                  borderRadius: '50%',
-                  objectFit: 'cover'
-                }}
+                className="responsive-image"
               />
             </div>
             <div className="IntroText">
@@ -51,9 +49,10 @@ const Home = () => {
               <br />
               <p>I encourage you to follow me on my social, and learn more About me:</p>
               <div className="Buttons">
-                <button className="ButtonsContent">About Me</button>
-                <button className="ButtonsContent">Work Experience & Education</button>
-                <button className="ButtonsContent">Contact Me</button>
+                <button className="ButtonsContent">About Me <BsFillPersonLinesFill /></button>
+                <button className="ButtonsContent">Work Experience & Education <IoSchoolSharp /></button>
+                <button className="ButtonsContent">Projects <PiBracketsAngle /></button>
+                <button className="ButtonsContent">Contact Me <MdPermContactCalendar /></button>
               </div>
             </div>
           </div>
