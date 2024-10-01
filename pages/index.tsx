@@ -11,6 +11,7 @@ import { IoSchoolSharp } from "react-icons/io5";
 import SocialMedia from "./SocialMedia";
 import DarkModeToggle from "./DarkModeToggle";
 import { useEffect, useState } from 'react';
+import Header from "./Header";
 
 const Home = () => {
   // Estado para controlar la visibilidad y aplicar la clase de fade-in
@@ -30,10 +31,7 @@ const Home = () => {
         <link rel="icon" href="/new-favicon.ico" />
       </Head> 
       <div className={`UIMainScreen ${isVisible ? 'fade-in' : ''}`}>
-        <header className="MainHeader">
-          <span>Jose Cebreros</span>
-          <DarkModeToggle />
-        </header>
+        <Header />
         <main>
           {/* Corrección de las comillas para aplicar la clase de manera correcta */}
           <div className="mainScreen">
@@ -56,8 +54,12 @@ const Home = () => {
                 <Link href="/WorkEducation">
                   <button className="ButtonsContent">Work Experience & Education <IoSchoolSharp /></button>
                 </Link>
-                <button className="ButtonsContent">Projects <PiBracketsAngle /></button>
-                <button className="ButtonsContent">Contact Me <MdPermContactCalendar /></button>
+                <Link href="/Projects">
+                  <button className="ButtonsContent">Projects <PiBracketsAngle /></button>
+                </Link>
+                <Link href="/ContactInfo">
+                  <button className="ButtonsContent">Contact Me <MdPermContactCalendar /></button>
+                </Link>
               </div>
             </div>
           </div>

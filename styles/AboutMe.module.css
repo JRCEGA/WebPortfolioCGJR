@@ -1,0 +1,19 @@
+.AboutMePortrait {
+    height: 600px;
+    display: flex;
+    
+}
+
+@media (max-width: 1100px) {
+    .AboutMePortrait {
+        height: 60vw;
+    }
+
+    .AboutMeContent {
+        margin: 0 15px;
+    }
+
+    .HobbiesPNG {
+        height: 40vw;
+    }
+}
