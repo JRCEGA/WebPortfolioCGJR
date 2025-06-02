@@ -1,0 +1,248 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.4);
+  color: var(--foreground);
+}
+
+.sectionIcon {
+  margin-right: 0.75rem;
+  color: #6366f1;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.7), rgba(99, 102, 241, 0.1));
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineItem:before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #6366f1;
+  border: 2px solid var(--background);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+.timelineContent {
+  background-color: var(--background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+html.dark-mode .timelineContent {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+html.dark-mode .timelineContent:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timelineHeader {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.dark-mode .timelineHeader {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.timelineHeader h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.company, .duration, .location {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  opacity: 0.7;
+}
+
+.company {
+  font-weight: 500;
+}
+
+.timelineBody {
+  padding: 1.25rem 1.5rem;
+}
+
+.timelineBody ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.timelineBody li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.timelineBody li:last-child {
+  margin-bottom: 0;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skillCategory h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skillTags span {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+html.dark-mode .skillTags span {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+}
+
+.homeButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 3rem auto 0;
+  opacity: 0.8;
+  align-self: center;
+}
+
+.homeButton:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.homeButton span {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.homeButton:hover span {
+  border-bottom-color: var(--foreground);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timelineItem:before {
+    left: -1.5rem;
+  }
+  
+  .timelineHeader h3 {
+    font-size: 1.2rem;
+  }
+  
+  .company, .duration, .location {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+} 
